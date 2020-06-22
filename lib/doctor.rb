@@ -17,7 +17,7 @@ class Doctor
   end
   
   def patients
-    Appointment.new(patients)
+    Appointment.collect(patients)
   end
    
   # def patients
