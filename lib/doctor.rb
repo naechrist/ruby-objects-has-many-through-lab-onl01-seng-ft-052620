@@ -15,10 +15,13 @@ class Doctor
   def new_appointment(patient, date)
     appointment = Appointment.new(date, patient, self)
   end
-   
+  
   def patients
-    appointments.collect {|appointment| appointment.doctor }
-  end
+    Appointment.new(patients)
+   
+  # def patients
+  #   appointments.collect {|appointment| appointment.doctor }
+  # end
  
   def appointments
     Appointment.all.select {|appointment| appointment.doctor}
