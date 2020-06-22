@@ -20,9 +20,6 @@ class Doctor
     Appointment.all.collect {|appointment| appointment.patient}
   end
    
-  # def patients
-  #   appointments.collect {|appointment| appointment.doctor }
-  # end
  
   def appointments
     Appointment.all.select {|appointment| appointment.doctor}
