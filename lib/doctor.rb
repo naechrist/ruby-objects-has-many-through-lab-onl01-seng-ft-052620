@@ -17,7 +17,7 @@ class Doctor
   end
   
   def patients
-    Appointment.all.map {|appointment| appointment.doctor }
+    Appointment.all.collect {|appointment| appointment.doctor }
   end
    
   # def patients
